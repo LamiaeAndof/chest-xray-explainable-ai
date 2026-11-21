@@ -1,7 +1,7 @@
 """Exporte les visuels et données du poster et du portfolio, à partir des résultats réels.
 
 Usage (depuis la racine du dépôt, après les notebooks 03 et 04) :
-    python -m poster.generer_assets --sortie <dossier du site> --url https://lamiaeandof.github.io
+    python -m poster.generer_assets --sortie <dossier du site> --url https://lamiaeandof.github.io/radiographies.html
 
 Produit dans <sortie>/projet/ :
     xray.jpg, gradcam.png           ouverture 3D : radiographie + carte Grad-CAM réelle (RGBA)
