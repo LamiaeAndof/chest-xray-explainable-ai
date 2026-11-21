@@ -1,0 +1,27 @@
+{
+  "part_bord_moyenne": 0.24727879464626312,
+  "part_bord_mediane": 0.2402300238609314,
+  "par_classe_predite": {
+    "NORMAL": 0.2874199151992798,
+    "PNEUMONIA": 0.229303777217865
+  },
+  "par_type": {
+    "FN": {
+      "mean": 0.35499998927116394,
+      "size": 3
+    },
+    "FP": {
+      "mean": 0.22200000286102295,
+      "size": 44
+    },
+    "VN": {
+      "mean": 0.28600001335144043,
+      "size": 190
+    },
+    "VP": {
+      "mean": 0.23000000417232513,
+      "size": 387
+    }
+  },
+  "n_cartes_majoritairement_bord(>0.5)": 2
+}

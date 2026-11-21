@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="10 34 1185 204" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">Pipeline du projet</title>
+  <desc id="d">Radiographie, prétraitement, découpage par patient, DenseNet-121, décision avec seuil, Grad-CAM.</desc>
+  <defs>
+    <marker id="fleche" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#14284b"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1200" height="250" fill="#ffffff"/>
+  <g font-size="15" fill="#14284b">
+    <!-- 1 -->
+    <rect x="10" y="40" width="170" height="150" rx="10" fill="#eef3fa" stroke="#14284b" stroke-width="1.5"/>
+    <text x="95" y="72" text-anchor="middle" font-weight="700" font-size="17">Radiographie</text>
+    <text x="95" y="102" text-anchor="middle">thoracique de face</text>
+    <text x="95" y="124" text-anchor="middle">enfant 1–5 ans</text>
+    <text x="95" y="146" text-anchor="middle" fill="#52514e" font-size="13">Kermany et al., 2018</text>
+    <line x1="182" y1="115" x2="208" y2="115" stroke="#14284b" stroke-width="2" marker-end="url(#fleche)"/>
+    <!-- 2 -->
+    <rect x="210" y="40" width="180" height="150" rx="10" fill="#eef3fa" stroke="#14284b" stroke-width="1.5"/>
+    <text x="300" y="72" text-anchor="middle" font-weight="700" font-size="17">Prétraitement</text>
+    <text x="300" y="102" text-anchor="middle">recadrage carré 224</text>
+    <text x="300" y="124" text-anchor="middle">sans déformation</text>
+    <text x="300" y="146" text-anchor="middle">rotation ±10°, zoom,</text>
+    <text x="300" y="166" text-anchor="middle">contraste (pas de flip)</text>
+    <line x1="392" y1="115" x2="418" y2="115" stroke="#14284b" stroke-width="2" marker-end="url(#fleche)"/>
+    <!-- 3 -->
+    <rect x="420" y="40" width="180" height="150" rx="10" fill="#eef3fa" stroke="#14284b" stroke-width="1.5"/>
+    <text x="510" y="72" text-anchor="middle" font-weight="700" font-size="17">Découpage</text>
+    <text x="510" y="94" text-anchor="middle" font-weight="700" font-size="17">par patient</text>
+    <text x="510" y="124" text-anchor="middle">train / validation</text>
+    <text x="510" y="146" text-anchor="middle">sans patient commun</text>
+    <text x="510" y="168" text-anchor="middle">test officiel intact</text>
+    <line x1="602" y1="115" x2="628" y2="115" stroke="#14284b" stroke-width="2" marker-end="url(#fleche)"/>
+    <!-- 4 -->
+    <rect x="630" y="40" width="180" height="150" rx="10" fill="#14284b" stroke="#14284b" stroke-width="1.5"/>
+    <text x="720" y="72" text-anchor="middle" font-weight="700" font-size="17" fill="#ffffff">DenseNet-121</text>
+    <text x="720" y="102" text-anchor="middle" fill="#ffffff">pré-entraîné ImageNet</text>
+    <text x="720" y="124" text-anchor="middle" fill="#ffffff">fine-tuning en 2 temps</text>
+    <text x="720" y="146" text-anchor="middle" fill="#ffffff">perte pondérée</text>
+    <text x="720" y="168" text-anchor="middle" fill="#cfd9ea" font-size="13">vs baseline : petit CNN</text>
+    <line x1="812" y1="115" x2="838" y2="115" stroke="#14284b" stroke-width="2" marker-end="url(#fleche)"/>
+    <!-- 5 -->
+    <rect x="840" y="40" width="160" height="150" rx="10" fill="#eef3fa" stroke="#14284b" stroke-width="1.5"/>
+    <text x="920" y="72" text-anchor="middle" font-weight="700" font-size="17">Décision</text>
+    <text x="920" y="102" text-anchor="middle">P(pneumonie)</text>
+    <text x="920" y="124" text-anchor="middle">seuil 0,5 ou</text>
+    <text x="920" y="146" text-anchor="middle">haute sensibilité</text>
+    <text x="920" y="168" text-anchor="middle" fill="#52514e" font-size="13">AUC, sens., spéc.</text>
+    <line x1="1002" y1="115" x2="1028" y2="115" stroke="#14284b" stroke-width="2" marker-end="url(#fleche)"/>
+    <!-- 6 -->
+    <rect x="1030" y="40" width="160" height="150" rx="10" fill="#fff4ec" stroke="#c2541f" stroke-width="1.5"/>
+    <text x="1110" y="72" text-anchor="middle" font-weight="700" font-size="17">Grad-CAM</text>
+    <text x="1110" y="102" text-anchor="middle">où regarde</text>
+    <text x="1110" y="124" text-anchor="middle">le modèle ?</text>
+    <text x="1110" y="146" text-anchor="middle">analyse des</text>
+    <text x="1110" y="168" text-anchor="middle">erreurs</text>
+  </g>
+  <text x="600" y="228" text-anchor="middle" font-size="13" fill="#52514e">Seuil et arrêt de l'entraînement choisis sur la validation ; le test officiel (624 images) ne sert qu'à l'évaluation finale.</text>
+</svg>

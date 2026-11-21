@@ -1,0 +1,29 @@
+{
+  "modele": "baseline",
+  "config": {
+    "modele": "baseline",
+    "epochs_tete": 0,
+    "lr_tete": 0.001,
+    "epochs": 15,
+    "lr": 0.001,
+    "batch": 32,
+    "patience": 4,
+    "seed": 42,
+    "amp": false,
+    "cpu": true,
+    "limite_batches": null
+  },
+  "meilleure_epoque": 14,
+  "meilleure_val_auc": 0.9910656770760398,
+  "epoques_effectuees": 15,
+  "duree_totale_min": 38.59519588947296,
+  "n_train": 4484,
+  "n_val": 748,
+  "pos_weight": 0.34735578298568726,
+  "n_parametres": 97809,
+  "appareil": "CPU",
+  "versions": {
+    "python": "3.12.4",
+    "torch": "2.5.1+cu118"
+  }
+}

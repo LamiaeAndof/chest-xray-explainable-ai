@@ -1,0 +1,20 @@
+D:\Projet_ChestXray\src\data.py:229: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\torch\csrc\utils\tensor_numpy.cpp:212.)
+  self.labels = torch.as_tensor(labels, dtype=torch.float32)
+Appareil : cuda (NVIDIA GeForce MX330)
+Train : 4484 images (3328 pneumonies, 1156 normales) ; val : 748 ; pos_weight = 0.347
+
+=== Phase « tete » : 2 époques max, lr=0.001, 1,025 paramètres entraînables ===
+[ 1] tete    perte train 0.1613 | val 0.1651 | AUC 0.9734 | sens 0.726 | spec 0.995 | 96s  <- meilleur
+[ 2] tete    perte train 0.1001 | val 0.1301 | AUC 0.9755 | sens 0.809 | spec 0.984 | 99s  <- meilleur
+
+=== Phase « complet » : 8 époques max, lr=0.0001, 6,954,881 paramètres entraînables ===
+[ 3] complet perte train 0.0820 | val 0.0883 | AUC 0.9963 | sens 0.863 | spec 1.000 | 302s  <- meilleur
+[ 4] complet perte train 0.0411 | val 0.0454 | AUC 0.9975 | sens 0.941 | spec 1.000 | 308s  <- meilleur
+[ 5] complet perte train 0.0300 | val 0.0347 | AUC 0.9973 | sens 0.959 | spec 0.990 | 304s
+[ 6] complet perte train 0.0280 | val 0.0342 | AUC 0.9977 | sens 0.959 | spec 0.995 | 304s  <- meilleur
+[ 7] complet perte train 0.0144 | val 0.0465 | AUC 0.9977 | sens 0.946 | spec 0.995 | 303s
+[ 8] complet perte train 0.0098 | val 0.0323 | AUC 0.9984 | sens 0.968 | spec 0.990 | 303s  <- meilleur
+[ 9] complet perte train 0.0065 | val 0.0268 | AUC 0.9989 | sens 0.968 | spec 0.995 | 303s  <- meilleur
+[10] complet perte train 0.0045 | val 0.0280 | AUC 0.9986 | sens 0.969 | spec 0.990 | 293s
+
+Meilleure AUC de validation : 0.9989 (époque 9) ; durée 43.6 min ; modèle : D:\Projet_ChestXray\models\densenet121_meilleur.pt

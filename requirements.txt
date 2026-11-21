@@ -1,0 +1,37 @@
+# Versions utilisées pour obtenir les résultats du README (Python 3.12, Windows 11).
+#
+# PyTorch avec GPU NVIDIA (CUDA 11.8, compatible avec les anciens drivers) :
+#   pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cu118
+# Sans GPU, la version CPU suffit (plus lent) :
+#   pip install torch==2.5.1 torchvision==0.20.1
+# Puis le reste :
+#   pip install -r requirements.txt
+#
+# grad-cam dépend d'opencv-python ; on utilise la variante « headless » (sans interface graphique) :
+#   pip install --no-deps grad-cam==1.5.4
+
+torch==2.5.1
+torchvision==0.20.1
+numpy==2.5.4
+pandas==3.1.1
+scikit-learn==1.9.1
+matplotlib==3.11.2
+pillow==13.0.0
+opencv-python-headless==5.1.0.95
+ttach==0.0.3
+tqdm==4.70.1
+
+# Notebooks
+ipykernel==7.4.0
+nbconvert==7.17.2
+nbformat==5.11.1
+
+# Téléchargement des données
+kaggle==2.2.5
+six
+
+# Poster (QR code)
+qrcode==8.2
+
+# Démo (optionnelle)
+# gradio

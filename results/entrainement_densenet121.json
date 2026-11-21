@@ -1,0 +1,29 @@
+{
+  "modele": "densenet121",
+  "config": {
+    "modele": "densenet121",
+    "epochs_tete": 2,
+    "lr_tete": 0.001,
+    "epochs": 8,
+    "lr": 0.0001,
+    "batch": 16,
+    "patience": 3,
+    "seed": 42,
+    "amp": true,
+    "cpu": false,
+    "limite_batches": null
+  },
+  "meilleure_epoque": 9,
+  "meilleure_val_auc": 0.9988610372030061,
+  "epoques_effectuees": 10,
+  "duree_totale_min": 43.609168008963266,
+  "n_train": 4484,
+  "n_val": 748,
+  "pos_weight": 0.34735578298568726,
+  "n_parametres": 6954881,
+  "appareil": "NVIDIA GeForce MX330",
+  "versions": {
+    "python": "3.12.4",
+    "torch": "2.5.1+cu118"
+  }
+}

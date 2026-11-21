@@ -1,0 +1,23 @@
+D:\Projet_ChestXray\src\data.py:229: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\torch\csrc\utils\tensor_numpy.cpp:212.)
+  self.labels = torch.as_tensor(labels, dtype=torch.float32)
+Appareil : cpu (CPU)
+Train : 4484 images (3328 pneumonies, 1156 normales) ; val : 748 ; pos_weight = 0.347
+
+=== Phase « complet » : 15 époques max, lr=0.001, 97,809 paramètres entraînables ===
+[ 1] complet perte train 0.1839 | val 0.2348 | AUC 0.9573 | sens 0.641 | spec 0.984 | 188s  <- meilleur
+[ 2] complet perte train 0.1490 | val 0.1178 | AUC 0.9680 | sens 0.885 | spec 0.959 | 215s  <- meilleur
+[ 3] complet perte train 0.1469 | val 0.1508 | AUC 0.9704 | sens 0.809 | spec 0.979 | 176s  <- meilleur
+[ 4] complet perte train 0.1397 | val 0.1092 | AUC 0.9720 | sens 0.928 | spec 0.917 | 168s  <- meilleur
+[ 5] complet perte train 0.1260 | val 0.2413 | AUC 0.9708 | sens 0.984 | spec 0.596 | 149s
+[ 6] complet perte train 0.1237 | val 0.1933 | AUC 0.9829 | sens 0.712 | spec 0.984 | 139s  <- meilleur
+[ 7] complet perte train 0.1147 | val 0.2681 | AUC 0.9796 | sens 0.652 | spec 0.995 | 138s
+[ 8] complet perte train 0.1132 | val 0.0849 | AUC 0.9845 | sens 0.930 | spec 0.964 | 137s  <- meilleur
+[ 9] complet perte train 0.0989 | val 0.0920 | AUC 0.9830 | sens 0.890 | spec 0.974 | 150s
+[10] complet perte train 0.1020 | val 0.0753 | AUC 0.9886 | sens 0.926 | spec 0.974 | 137s  <- meilleur
+[11] complet perte train 0.0923 | val 0.0834 | AUC 0.9894 | sens 0.895 | spec 0.979 | 142s  <- meilleur
+[12] complet perte train 0.0861 | val 0.0913 | AUC 0.9868 | sens 0.886 | spec 0.984 | 141s
+[13] complet perte train 0.0870 | val 0.0710 | AUC 0.9900 | sens 0.923 | spec 0.979 | 142s  <- meilleur
+[14] complet perte train 0.0812 | val 0.0809 | AUC 0.9911 | sens 0.901 | spec 0.979 | 148s  <- meilleur
+[15] complet perte train 0.0805 | val 0.0764 | AUC 0.9899 | sens 0.910 | spec 0.979 | 145s
+
+Meilleure AUC de validation : 0.9911 (époque 14) ; durée 38.6 min ; modèle : D:\Projet_ChestXray\models\baseline_meilleur.pt

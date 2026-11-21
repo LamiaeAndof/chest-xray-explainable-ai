@@ -1,0 +1,36 @@
+# --- Secrets : ne JAMAIS publier ---
+kaggle.json
+*.env
+
+# --- Brief personnel (instructions de travail, non destiné au dépôt public) ---
+CLAUDE.md
+
+# --- Environnement local (tout est sur D:) ---
+.venv/
+.cache/
+.tmp/
+env_local.ps1
+
+# --- Données : on ne publie pas les images, seulement les instructions ---
+data/
+
+# --- Poids des modèles (trop lourds / régénérables) ---
+models/*.pt
+
+# --- Python / Jupyter ---
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# --- Divers ---
+.DS_Store
+Thumbs.db
+.vscode/
+
+# --- Portfolio : contenus personnels et site (dépôt séparé LamiaeAndof.github.io) ---
+portfolio_assets/
+portfolio_assets.zip
+portfolio_site/
+
+# --- Cartes Grad-CAM brutes (régénérables, volumineuses) ---
+results/cartes_gradcam_test_*.npy
